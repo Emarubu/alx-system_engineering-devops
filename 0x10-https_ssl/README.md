@@ -1,0 +1,2 @@
+0x10. HTTPS SSL
+ HTTPS basically a standard Internet protocol that makes the online data to be encrypted and is a more advanced and secure version of the HTTP protocol. SSL is a part of the HTTPS protocol that performs the encryption of the data.
