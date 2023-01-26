@@ -47,5 +47,5 @@ frontend ehoneah-frontend-https
 
 backend ehoneah-backend
         balance roundrobin
-        server 87231-web-01 34.232.67.144:80 check 
-	server 87231-web-02 54.175.253.171:80 check
+        server 80334-web-01 34.232.67.144:80 check 
+	server -web-02 54.175.253.171:80 check
