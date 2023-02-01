@@ -33,19 +33,19 @@ defaults
 	errorfile 503 /etc/haproxy/errors/503.http
 	errorfile 504 /etc/haproxy/errors/504.http
 
-frontend  ehoneah-frontend-http
+frontend  themarubu-frontend-http
         bind *:80
         mode http
-	http-request set-header X-Forwarded-Proto http
-        default_backend ehoneah-backend
+        http-request set-header X-Forwarded-Proto http
+        default_backend themarubu-backend
 
-frontend ehoneah-frontend-https
-	bind *:443 ssl crt /etc/haproxy/certs/www.ehoneah.tech.pem
+frontend themarubu-frontend-https
+	bind *:443 ssl crt /etc/haproxy/certs/www.themarubu.tech.pem
 	http-request set-header X-Forwarded-Proto https
 	http-request redirect scheme https code 301 unless { ssl_fc }
-	default_backend ehoneah-backend
+	default_backend themarubu-backend
 
-backend ehoneah-backend
+backend themarubu-backend
         balance roundrobin
-        server 80334-web-01 34.232.67.144:80 check 
-	server 80334-web-02 54.175.253.171:80 check
+        server 80334-web-01 34.232.67.144:80 check
+        server 80334-web-02 54.175.253.171:80 check
